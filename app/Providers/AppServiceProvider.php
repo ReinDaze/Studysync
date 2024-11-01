@@ -8,6 +8,13 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     /**
+     * Halaman setelah login.
+     *
+     * @var string
+     */
+    public const HOME = 'dashboard';
+
+    /**
      * Register any application services.
      */
     public function register(): void
@@ -23,12 +30,5 @@ class AppServiceProvider extends ServiceProvider
         Vite::prefetch(concurrency: 3);
     }
 
-    protected function mapApiRoutes()
-    {
-        Route::prefix('api')
-            ->middleware('api')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/api.php'));
-    }
 
 }
