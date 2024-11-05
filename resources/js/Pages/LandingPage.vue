@@ -3,7 +3,6 @@ import HeaderContent from '@/Components/HeaderContent.vue';
 import FooterContent from '@/Components/FooterContent.vue';
 
 
-
 export default {
   components: {
     HeaderContent,
